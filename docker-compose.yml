@@ -13,7 +13,7 @@ services:
       - PHP_IDE_CONFIG=serverName=docker-server
     #      O server-docker é uma configuração em PHP -> Server em que você colocará e host=localhost porta=8000 e o path mappings pegando a raiz do projeto e apontando pra /var/www
     volumes:
-      - ./:/var/www
+      - ./laravel:/var/www
     expose:
       - 9002
     networks:
@@ -29,7 +29,7 @@ services:
     ports:
       - "81:80"
     volumes:
-      - ./:/var/www
+      - ./laravel:/var/www
     networks:
       - srp_ocp_network
     depends_on:
